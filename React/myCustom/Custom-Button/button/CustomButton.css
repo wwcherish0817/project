@@ -1,0 +1,6 @@
+button{display: flex;align-items: center;}
+button span{display: inline-block;height: 21px;line-height: 21px;}
+.loadbgIcon{background: url(loading.gif) 0 0  no-repeat;width: 21px; height: 21px;background-size: 100% 100%;display: none;margin-right: 8px;}
+button   .loadbgIcon{display: inline-block;}
+button.big{padding: 50px;font-size: 30px;}
+button.big  .loadbgIcon{width: 65px; height: 65px;margin-right: 20px;}

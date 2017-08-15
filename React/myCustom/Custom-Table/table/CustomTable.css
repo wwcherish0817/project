@@ -1,0 +1,6 @@
+.CustomTable{border-collapse:collapse}
+.CustomTable  td,.CustomTable  th{text-align: center;border: 1px solid #ccc;padding: 5px;}
+.tabList{margin: 5px 0px;}
+.tabList span{display: inline-block;width: 20px;height: 20px;margin: 0px 5px;
+    text-align: center;line-height: 20px;border:1px solid #ccc;}
+.tabList .select{color:red;}

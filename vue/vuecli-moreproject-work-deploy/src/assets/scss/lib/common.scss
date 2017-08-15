@@ -1,0 +1,48 @@
+@import './_view_set';
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body,
+html {
+    @extend %font-family;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    @extend %font-family;
+    @extend %box;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.bg-error {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    //background-image: url($cdn + 'no wifi@3x.png');
+    background-size: p(220px) p(223px);
+    background-position: center;
+    background-repeat: no-repeat;
+}

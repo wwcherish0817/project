@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+@function p($px, $base-font-size: 75px) {
+    @if (unitless($px)) {
+        @warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+        @return p($px + 0px);
+    } @else if (unit($px) == em) {
+        @return $px;
+    }
+    @return ($px / $base-font-size) * 1rem;
+}
+
+@mixin d($font-size){
+    font-size: $font-size;
+
+    [data-dpr="2"] & {
+        font-size: $font-size * 2;
+    }
+
+    [data-dpr="3"] & {
+        font-size: $font-size * 3;
+    }
+}
+
+%font-family {
+     font-family:"PingFangSC-Light", "Microsoft Yahei", Helvetica, Arial, sans-serif !important;
+}
+
+/* 改变盒模型的展示 */
+%box{
+    box-sizing:border-box;
+}
+/* 使用flex模型后浮动失效 */
+%flex{
+    display: -webkit-flex; 
+    display: flex;
+}
+
+/* 20px */
+$fs0:12px;
+/* 24px */
+$fs1:14px;
+/* 28px */
+$fs2:16px;
+/* 32px */
+$fs3:18px;
+$fs4:20px;
+// 清除浮动
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix:after{
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content: " ";
+    clear:both;
+    height:0;
+}
+.clearfix{*zoom:1;}
+//cdn  href
+$cdn:'../i/';
+$cdx: '../../dist/images/';
+@mixin bosz($info){
+    background-size: $info;
+    -webkit-background-size: $info;
+}
+@mixin boz(){
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+/*
+@media screen and (orientation: portrait){
+    竖屏
+}
+@media screen and (orientation: landscape){
+    横屏
+}*/

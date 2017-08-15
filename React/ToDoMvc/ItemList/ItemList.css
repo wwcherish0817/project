@@ -1,0 +1,21 @@
+.itemChild{
+    width: auto;height: 26px;line-height: 26px;
+}
+.itemChild span{display: inline-block;}
+.itemChild span:nth-child(1){margin-right: 30px;}
+.itemChild span:nth-child(2){
+    display: none;
+
+}
+.itemChild input{
+    display: none; width: 100px;  margin-right: 30px;
+}
+.itemChild:hover span:nth-child(2){
+    display: inline-block;
+}
+.itemChild.editClass span:nth-child(1){
+    display: none;
+}
+.itemChild.editClass input{
+    display: inline-block;
+}

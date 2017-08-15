@@ -1,0 +1,5 @@
+ajax is superagent:
+npm install superagent --save
+
+style is ant design:
+npm install antd --save
